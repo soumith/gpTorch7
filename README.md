@@ -3,7 +3,6 @@
 <a name="gpTorch7.intro.dok"/>
 # gpTorch7 #
 
-[![Join the chat at https://gitter.im/j-wilson/gpTorch7](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/j-wilson/gpTorch7?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 __gpTorch7__ is a framework for Gaussian Process-based machine learning implemented in Torch7. This package is currently still in an alpha-build stage; so, please feel free to pass along suggestions and/or feedback.
 <a name="gpTorch7.content.dok"/>
 ## Package Content ##
