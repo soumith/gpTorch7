@@ -12,8 +12,9 @@ Modified: 2015-09-21
 ------------------------------------------------
 --                                   Initializer
 ------------------------------------------------
-scores = {}
+local gp = require 'gp.env'
+gp.scores = {}
 include('metascore.lua')
 include('expected_improvement.lua')
 include('confidence_bound.lua')
-return scores
+return gp.scores

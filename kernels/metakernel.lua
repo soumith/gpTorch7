@@ -11,11 +11,11 @@ Modified: 2015-09-24
 
 ---------------- External Dependencies
 require('math')
-
+local gp = require 'gp.env'
 ------------------------------------------------
 --                                    metakernel
 ------------------------------------------------
-local metakernel = torch.class('kernels.metakernel')
+local metakernel = torch.class('gp.kernels.metakernel')
 
 function metakernel:__init()
 end
@@ -62,3 +62,5 @@ end
 function metakernel:__tostring__()
   return torch.type(self)
 end
+
+return metakernel

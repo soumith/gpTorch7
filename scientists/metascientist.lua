@@ -8,10 +8,11 @@ Authored: 2015-09-18 (jwilson)
 Modified: 2015-09-18
 --]]
 
+local gp = require 'gp.env'
 ------------------------------------------------
 --                                 metascientist
 ------------------------------------------------
-local scientist = torch.class('scientists.metascientist')
+local scientist = torch.class('gp.scientists.metascientist')
 
 function scientist:__init()
 end
@@ -26,3 +27,5 @@ end
 function scientist.nominate()
   print('Error: nominate() method not implemented')
 end
+
+return scientist

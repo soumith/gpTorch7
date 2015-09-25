@@ -20,8 +20,7 @@ local sqrt2pi_inv = 1/math.sqrt(2*math.pi)
 ------------------------------------------------
 --                                gpTorch7_utils
 ------------------------------------------------
-local utils = torch.class('utils')
-
+local utils = {}
 --------------------------------
 --         Imports from penlight
 --------------------------------
@@ -403,38 +402,3 @@ end
 
 return utils
 
-------------------------------------------------
---                           Developers' Section
-------------------------------------------------
--- --------------------------------
--- --       Reload gpTorch7 modules 
--- --------------------------------
--- function utils.reload(module, gpTorch7)
---   local gpTorch7 = gpTorch7 or _G.gpTorch7
-
---   if not gpTorch7 then
---     print('Error: Unable to locate gpTorch7.')
---   end
-
---   if type(module) ~= 'string' then
---     print('Error: utils.reload() expects a string argument!')
---     return
---   end
-
---   if module == 'gpTorch7' then
---     print('Error: gpTorch7.utils only support reloading of modules!')
---     return
---   end
-
---   if module == 'utils' then
---     print('Error: gpTorch7.utils is unable to reload itself!')
---     return
---   end
-
---   gpTorch7[module] = nil
---   print(lua_getmetatable(gpTorch7[module], -1))
---   gpTorch7[module] = paths.dofile(module..'/init.lua')
---   _G[module]       = nil
-  
---   return gpTorch7
--- end

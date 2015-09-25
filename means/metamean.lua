@@ -10,11 +10,11 @@ Modified: 2015-09-24
 
 ---------------- External Dependencies
 require('math')
-
+local gp = require 'gp.env'
 ------------------------------------------------
 --                                      metamean
 ------------------------------------------------
-local metamean = torch.class('means.metamean')
+local metamean = torch.class('gp.means.metamean')
 
 function metamean:__init()
 end
@@ -43,3 +43,5 @@ end
 function metamean:__tostring__()
   return torch.type(self)
 end
+
+return metamean

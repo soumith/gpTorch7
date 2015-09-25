@@ -14,10 +14,10 @@ torch = require('torch')
 optim = require('optim')
 math  = require('math')
 
-local utils = gpTorch7.utils
+local utils = require 'gp.utils'
 
 ---------------- Constants
-configs            = {}
+local configs      = {}
 configs['slice']   = {}
 configs['lsearch'] = {verbose    = true,
                       maxIter    = 100}
@@ -31,7 +31,7 @@ configs['lbfgs']   = {verbose    = true,
 ------------------------------------------------
 --                    Gaussian Process Regressor
 ------------------------------------------------
-local GPR, parent = torch.class('models.gp_regressor', 'models.metamodel')
+local GPR, parent = torch.class('gp.models.gp_regressor', 'gp.models.metamodel')
 
 --------------------------------
 --                Initialization
@@ -380,3 +380,5 @@ function GPR:sample_hypers(X, Y, X0, config, as_table)
 
   return samples
 end
+
+return GPR

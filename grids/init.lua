@@ -11,7 +11,8 @@ Modified: 2015-09-21
 ------------------------------------------------
 --                                   Initializer
 ------------------------------------------------
-grids = {}
+local gp = require 'gp.env'
+gp.grids = {}
 include('metagrid.lua')
 include('random.lua')
-return grids
+return gp.grids

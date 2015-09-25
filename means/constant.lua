@@ -10,11 +10,11 @@ Modified: 2015-09-24
 
 ---------------- External Dependencies
 require('math')
-
+local gp = require 'gp.env'
 ------------------------------------------------
 --                                      Constant
 ------------------------------------------------
-local const, parent = torch.class('means.constant', 'means.metamean')
+local const, parent = torch.class('gp.means.constant', 'gp.means.metamean')
 
 function const:__init()
   parent.__init(self)
@@ -43,3 +43,4 @@ end
 -- end
 
 
+return const

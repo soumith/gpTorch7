@@ -9,10 +9,11 @@ Modified: 2015-09-21
 --]]
 
 ---------------- External Dependencies
+local gp = require 'gp.env'
 ------------------------------------------------
 --                                   metasampler
 ------------------------------------------------
-local sampler = torch.class('samplers.metasampler')
+local sampler = torch.class('gp.samplers.metasampler')
 
 function sampler:__init()
 end
@@ -34,8 +35,4 @@ function sampler.sample()
   print('Error: sample() method not implemented')
 end
 
-
-
-
-
-
+return sampler

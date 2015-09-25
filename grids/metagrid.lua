@@ -9,10 +9,11 @@ Modified: 2015-09-18
 --]]
 
 ---------------- External Dependencies
+local gp = require 'gp.env'
 ------------------------------------------------
 --                                      metagrid
 ------------------------------------------------
-local metagrid = torch.class('grids.metagrid')
+local metagrid = torch.class('gp.grids.metagrid')
 
 function metagrid:__init()
 end
@@ -26,5 +27,4 @@ function metagrid.generate(config)
   print('Error: generate() method not implemented')
 end
 
-
-
+return metagrid

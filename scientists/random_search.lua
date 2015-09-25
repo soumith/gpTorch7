@@ -9,14 +9,15 @@ Modified: 2015-09-25
 --]]
 
 ---------------- External Dependencies
-paths = require('paths')
+local paths = require('paths')
 math  = require('math')
-local utils = gpTorch7.utils
+local gp = require 'gp.env'
+local utils = require 'gp.utils'
 ------------------------------------------------
 --                                 random_search
 ------------------------------------------------
-local scientist, parent = torch.class('scientists.random_search', 
-                                      'scientists.metascientist')
+local scientist, parent = torch.class('gp.scientists.random_search', 
+                                      'gp.scientists.metascientist')
 
 function scientist:__init(config, objective)
   parent.__init(self)
@@ -124,3 +125,4 @@ function scientist:progress_report(t, x, y)
   end
 end
 
+return scientist

@@ -9,10 +9,11 @@ Modified: 2015-09-18
 --]]
 
 ---------------- External Dependencies
+local gp = require 'gp.env'
 ------------------------------------------------
 --                                        random
 ------------------------------------------------
-local grid, parent = torch.class('grids.random', 'grids.metagrid')
+local grid, parent = torch.class('gp.grids.random', 'gp.grids.metagrid')
 
 function grid:__init(config)
   parent.__init(self)
@@ -24,3 +25,5 @@ function grid.generate(config)
         X:cmul((config.maxes - config.mins):expandAs(X)):add(config.mins:expandAs(X)) 
   return X
 end
+
+return grid

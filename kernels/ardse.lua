@@ -18,12 +18,12 @@ Modified: 2015-09-24
 --]]
 
 ---------------- External Dependencies
-local utils = gpTorch7.utils
+local utils = require 'gp.utils'
 
 ------------------------------------------------
 --                                         ARDSE
 ------------------------------------------------
-local ARDSE, parent = torch.class('kernels.ardse', 'kernels.metakernel')
+local ARDSE, parent = torch.class('gp.kernels.ardse', 'gp.kernels.metakernel')
 
 function ARDSE:__init()
   parent.__init(self)
@@ -174,3 +174,5 @@ end
 --    return grads
 -- end
 
+
+return ARDSE

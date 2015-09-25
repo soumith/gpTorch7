@@ -9,11 +9,11 @@ Modified: 2015-09-24
 --]]
 
 ---------------- External Dependencies
-local utils = gpTorch7.utils
+local utils = require 'gp.utils'
 ------------------------------------------------
 --                                     metamodel
 ------------------------------------------------
-local metamodel = torch.class('models.metamodel')
+local metamodel = torch.class('gp.models.metamodel')
 
 function metamodel:__init()
 end
@@ -43,4 +43,4 @@ function metamodel:__tostring__()
   return torch.type(self)
 end
 
-
+return metamodel

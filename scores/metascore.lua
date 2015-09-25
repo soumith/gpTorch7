@@ -10,10 +10,11 @@ Modified: 2015-09-21
 --]]
 
 ---------------- External Dependencies
+local gp = require 'gp.env'
 ------------------------------------------------
 --                               metaacquisition
 ------------------------------------------------
-local score = torch.class('scores.metascore')
+local score = torch.class('gp.scores.metascore')
 
 function score:__init()
 end
@@ -25,3 +26,5 @@ end
 function score.eval()
   print('Error: eval() method not implemented')
 end
+
+return score

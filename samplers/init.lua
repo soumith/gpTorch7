@@ -11,8 +11,9 @@ Modified: 2015-09-16
 ------------------------------------------------
 --                                   Initializer
 ------------------------------------------------
-samplers = {}
+local gp = require 'gp.env'
+gp.samplers = {}
 include('metasampler.lua')
 include('slice.lua')
 
-return samplers
+return gp.samplers

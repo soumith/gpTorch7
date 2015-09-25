@@ -11,8 +11,9 @@ Modified: 2015-09-18
 ------------------------------------------------
 --                                   Initializer
 ------------------------------------------------
-scientists = {}
+local gp = require 'gp.env'
+gp.scientists = {}
 include('metascientist.lua')
 include('random_search.lua')
 include('bayesopt.lua')
-return scientists
+return gp.scientists

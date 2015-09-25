@@ -9,12 +9,12 @@ Modified: 2015-09-24
 --]]
 
 ---------------- External Dependencies
-local utils = gpTorch7.utils
-
+local utils = require 'gp.utils'
+local gp = require 'gp.env'
 ------------------------------------------------
 --                                         slice
 ------------------------------------------------
-local sampler, parent = torch.class('samplers.slice', 'samplers.metasampler')
+local sampler, parent = torch.class('gp.samplers.slice', 'gp.samplers.metasampler')
 
 function sampler:__init()
   parent.__init(self)
@@ -173,3 +173,5 @@ function sampler.directed_slice(opt, f, f_args, dir, x0)
   collectgarbage()
   return x0 + dir:clone():cmul(dx)
 end
+
+return sampler

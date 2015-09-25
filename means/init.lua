@@ -13,7 +13,8 @@ Modified: 2015-09-15
 ------------------------------------------------
 --                                   Initializer
 ------------------------------------------------
-means = {}
+local gp = require 'gp.env'
+gp.means = {}
 include('metamean.lua')
 include('constant.lua')
 

@@ -11,12 +11,12 @@ Modified: 2015-09-25
 ---------------- External Dependencies
 paths = require('paths')
 math  = require('math')
-local utils = gpTorch7.utils
+local utils = require 'gp.utils'
 ------------------------------------------------
 --                                 random_search
 ------------------------------------------------
-local scientist, parent = torch.class('scientists.bayesopt',
-                                      'scientists.metascientist')
+local scientist, parent = torch.class('gp.scientists.bayesopt',
+                                      'gp.scientists.metascientist')
 
 function scientist:__init(config, objective)
   parent.__init(self)
@@ -203,3 +203,5 @@ function scientist:progress_report(t, x, y)
     print('Response: ' .. utils.tnsr2str(self.best.y) .. '\n')
   end
 end
+
+return scientists

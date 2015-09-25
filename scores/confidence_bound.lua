@@ -17,12 +17,13 @@ Modified: 2015-09-22
 --]]
 
 ---------------- External Dependencies
-local utils = gpTorch7.utils
-
+local utils = require 'gp.utils'
+local gp = require 'gp.env'
 ------------------------------------------------
 --                              confidence_bound
 ------------------------------------------------
-local conf_bound, parent = torch.class('scores.confidence_bound', 'scores.metascore')
+local conf_bound, parent = torch.class('gp.scores.confidence_bound', 
+				       'gp.scores.metascore')
 
 function conf_bound:__init(config)
   local config = config or {}
@@ -107,3 +108,5 @@ function conf_bound.LCB(fval, fvar, tradeoff)
   end
   return lcb
 end
+
+return conf_bound

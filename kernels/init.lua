@@ -11,8 +11,10 @@ Modified: 2015-09-18
 ------------------------------------------------
 --                                   Initializer
 ------------------------------------------------
-kernels = {}
+local gp = require 'gp.env'
+gp.kernels = {}
 include('metakernel.lua')
 include('ardse.lua')
 include('GaussianNoise_iso.lua')
-return kernels
+
+return gp.kernels

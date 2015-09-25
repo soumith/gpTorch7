@@ -14,13 +14,13 @@ Modified: 2015-09-22
 --]]
 
 ---------------- External Dependencies
-local utils = gpTorch7.utils
+local utils = require 'gp.utils'
 local math  = require('math')
-
+local gp = require 'gp.env'
 ------------------------------------------------
 --                          expected_improvement
 ------------------------------------------------
-local EI, parent = torch.class('scores.expected_improvement', 'scores.metascore')
+local EI, parent = torch.class('gp.scores.expected_improvement', 'gp.scores.metascore')
 
 function EI:__init(config)
   parent.__init(self)
@@ -82,3 +82,5 @@ function EI.compute(fval, fvar, fmin, tradeoff)
   end
   return ei
 end
+
+return EI

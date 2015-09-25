@@ -9,12 +9,13 @@ Modified: 2015-09-24
 --]]
 
 ---------------- External Dependencies
-local utils = gpTorch7.utils
+local utils = require 'gp.utils'
 
 ------------------------------------------------
 --                             GaussianNoise_iso
 ------------------------------------------------
-local nzModel, parent = torch.class('kernels.GaussianNoise_iso', 'kernels.metakernel')
+local nzModel, parent = torch.class('gp.kernels.GaussianNoise_iso', 
+				    'gp.kernels.metakernel')
 
 function nzModel:__init()
   parent.__init(self)
@@ -97,3 +98,5 @@ end
 --   return grad
 -- end
 
+
+return nzModel

@@ -11,7 +11,10 @@ Modified: 2015-09-24
 ------------------------------------------------
 --                                   Initializer
 ------------------------------------------------
-models = {}
+
+local gp = require 'gp.env'
+gp.models = {}
 include('metamodel.lua')
 include('gp_regressor.lua')
-return models
+
+return gp.models
